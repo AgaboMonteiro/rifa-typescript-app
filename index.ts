@@ -202,7 +202,7 @@ const fecharModalRifaGerada = () => {
  */
 const incrementarNumFichas = () => {
     const valorPrevio = parseInt(inputQuantidadeFichas.value, 10);
-    inputQuantidadeFichas.value = valorPrevio < 999 ? (valorPrevio + 1) + '' : '999';
+    inputQuantidadeFichas.value = valorPrevio < 9999 ? (valorPrevio + 1) + '' : '9999';
 
     atualizarQuantidadePaginas();
 };
@@ -230,7 +230,7 @@ const validarInputQuantidadeFicha = () => {
     if (valor < 1) {
         inputQuantidadeFichas.value = '1';
     } else if (valor > 999) {
-        inputQuantidadeFichas.value = '999';
+        inputQuantidadeFichas.value = '9999';
     } else {
         inputQuantidadeFichas.value = valor + '';
     }
